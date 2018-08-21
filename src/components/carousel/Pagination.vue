@@ -69,23 +69,15 @@
         ></button>
       </li>
     </ul>
-    <arrow 
-      class="carousel-back-button"
+    <arrow
       :next="false"
-      v-show="carousel.pageCount > 1"
-      v-on:click.native="goToPage(carousel.currentPage - 1)"
-      :style="`
-        display: ${showBack() ? 'none' : 'inherit'}
-      `"
+      v-show="carousel.pageCount > 1 && showBack()"
+      v-on:click.native="goBack()"
     ></arrow>
-    <arrow 
-      class="carousel-next-button"
+    <arrow
       :next="true"
-      v-show="carousel.pageCount > 1"
-      v-on:click.native="goToPage(carousel.currentPage + 1)"
-      :style="`
-        display: ${showNext() ? 'none' : 'inherit'}
-      `"
+      v-show="carousel.pageCount > 1 && showNext()"
+      v-on:click.native="goNext()"
     ></arrow>
   </div>
 </template>
@@ -108,6 +100,20 @@
     },
     methods: {
       /**
+       * Go next image
+       * return {void}
+       */
+      goNext() {
+        this.goToPage(this.carousel.currentPage + 1)
+      },
+      /**
+       * Go to prev image
+       * return {void}
+       */
+      goBack() {
+        this.goToPage(this.carousel.currentPage - 1)
+      },
+      /**
        * Change page by index
        * @param {number} index
        * return {void}
@@ -124,14 +130,14 @@
        * @return {boolean}
        */
       showBack() {
-        return this.carousel.currentPage === 0
+        return this.carousel.currentPage !== 0
       },
       /**
        * Check can we go next
        * @return {boolean}
        */
       showNext() {
-        return this.carousel.currentPage === this.paginationCount - 1
+        return this.carousel.currentPage !== this.paginationCount - 1
       },
 
       /**

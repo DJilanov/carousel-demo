@@ -15,9 +15,11 @@
 
 <template>
   <svg viewBox="0 0 100 100" 
-    class="flickity-button-icon" 
+    class="flickity-button-icon"
     :class="{
-      next: next
+      next: next,
+      'carousel-next-button': next,
+      'carousel-back-button': !next
     }">
     <path 
       d="M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z" 

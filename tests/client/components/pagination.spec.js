@@ -4,56 +4,35 @@ const utils = require('../utils');
 const Carousel = require('../../../src/components/carousel/Carousel.vue');
 const Slide = require('../../../src/components/carousel/Slide.vue');
 
-describe('Navigation', () => {
+describe('Pagination', () => {
   let vm;
   let carouselInstance;
-  let $navigation;
+  let $pagination;
 
   beforeEach(() => {
     vm = new Vue({
       el: document.createElement('div'),
-      render: (h) => h(Carousel, { props: { navigationEnabled: true, perPage: 1 } }, [h(Slide), h(Slide)]),
+      render: (h) => h(Carousel, { props: { paginationEnabled: true, perPage: 1 } }, [h(Slide), h(Slide), h(Slide), h(Slide), h(Slide)]),
     });
     carouselInstance = vm.$children[0];
-    $navigation = vm.$el.querySelector('.navigation');
+    $pagination = vm.$el.querySelector('.carousel-pagination');
   });
 
   it('should mount successfully', () => {
-    expect($navigation).toBeDefined();
+    expect($pagination).toBeDefined();
 
     return utils.expectToMatchSnapshot(vm);
   });
 
   it('should render a next button', () => {
-    expect(vm.$el.querySelector('.VueCarousel-navigation-next')).toBeDefined();
+    expect(vm.$el.querySelector('svg.carousel-next-button')).toBeDefined();
 
     return utils.expectToMatchSnapshot(vm);
   });
 
   it('should render a prev button', () => {
-    expect(vm.$el.querySelector('.VueCarousel-navigation-prev')).toBeDefined();
+    expect(vm.$el.querySelector('svg.carousel-back-button')).toBeDefined();
 
     return utils.expectToMatchSnapshot(vm);
-  });
-
-  it('should trigger page advance when next is clicked', () => {
-    vm.$el.querySelector('.carousel-next-button').click();
-
-    return carouselInstance.$nextTick().then(() => {
-      expect(carouselInstance.currentPage).toBe(1);
-
-      return utils.expectToMatchSnapshot(vm);
-    });
-  });
-
-  it('should trigger page advance backward when prev is clicked', () => {
-    carouselInstance.goToPage(2);
-    vm.$el.querySelector('.carousel-back-button').click();
-
-    return carouselInstance.$nextTick().then(() => {
-      expect(carouselInstance.currentPage).toBe(1);
-
-      return utils.expectToMatchSnapshot(vm);
-    });
   });
 });

@@ -1,6 +1,9 @@
-exports[`Navigation should mount successfully 1`] = `
+exports[`Pagination should mount successfully 1`] = `
 ".carousel-wrapper
   .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+    .carousel-slide
     .carousel-slide
     .carousel-slide
 |  
@@ -8,20 +11,29 @@ exports[`Navigation should mount successfully 1`] = `
   ul.carousel-dot-container(role=\'tablist\')
     li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
       button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 2\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 3\', tabindex=\'0\', class=\'active:\')
     li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
-      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 4\', tabindex=\'0\', class=\'active:\')
   |  
-  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+  svg.flickity-button-icon.carousel-back-button(viewbox=\'0 0 100 100\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
   |  
-  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+  svg.flickity-button-icon.next.carousel-next-button(viewbox=\'0 0 100 100\', style=\'display: none;\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
 "
 `;
 
-exports[`Navigation should render a next button 1`] = `
+exports[`Pagination should render a next button 1`] = `
 ".carousel-wrapper
   .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+    .carousel-slide
     .carousel-slide
     .carousel-slide
 |  
@@ -29,20 +41,29 @@ exports[`Navigation should render a next button 1`] = `
   ul.carousel-dot-container(role=\'tablist\')
     li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
       button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 2\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 3\', tabindex=\'0\', class=\'active:\')
     li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
-      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 4\', tabindex=\'0\', class=\'active:\')
   |  
-  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+  svg.flickity-button-icon.carousel-back-button(viewbox=\'0 0 100 100\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
   |  
-  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+  svg.flickity-button-icon.next.carousel-next-button(viewbox=\'0 0 100 100\', style=\'display: none;\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
 "
 `;
 
-exports[`Navigation should render a prev button 1`] = `
+exports[`Pagination should render a prev button 1`] = `
 ".carousel-wrapper
   .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+    .carousel-slide
     .carousel-slide
     .carousel-slide
 |  
@@ -50,13 +71,19 @@ exports[`Navigation should render a prev button 1`] = `
   ul.carousel-dot-container(role=\'tablist\')
     li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
       button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 2\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 3\', tabindex=\'0\', class=\'active:\')
     li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
-      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 4\', tabindex=\'0\', class=\'active:\')
   |  
-  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+  svg.flickity-button-icon.carousel-back-button(viewbox=\'0 0 100 100\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
   |  
-  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+  svg.flickity-button-icon.next.carousel-next-button(viewbox=\'0 0 100 100\', style=\'display: none;\')
     path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
 "
 `;
