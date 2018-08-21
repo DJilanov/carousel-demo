@@ -1,14 +1,14 @@
 <style scoped>
-.carousel-slide {
-  flex-basis: inherit;
-  flex-grow: 0;
-  flex-shrink: 0;
-  user-select: none;
-  backface-visibility: hidden;
-  -webkit-touch-callout: none;
-  outline: none;
-  min-height: 100%;
-}
+  .carousel-slide {
+    flex-basis: inherit;
+    flex-grow: 0;
+    flex-shrink: 0;
+    user-select: none;
+    backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    outline: none;
+    min-height: 100%;
+  }
 </style>
 
 <template>

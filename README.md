@@ -1,4 +1,7 @@
-# Carousel Demo By DJilanov
+# VueJS Carousel Demo By DJilanov
+
+## How to setup enviroment
+``` npm install ```
 
 ## How to run dev enviroment
 ``` npm run dev ```

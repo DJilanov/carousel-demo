@@ -1,16 +1,16 @@
 <style scoped>
-svg {
-  height: 100px;
-  position: absolute;
-  top: 180px;
-  left: 0;
-}
+  svg {
+    height: 100px;
+    position: absolute;
+    top: 180px;
+    left: 0;
+  }
 
-.next {
-  transform: scaleX(-1);
-  right: 0;
-  left: auto;
-}
+  .next {
+    transform: scaleX(-1);
+    right: 0;
+    left: auto;
+  }
 </style>
 
 <template>
