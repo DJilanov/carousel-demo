@@ -1,0 +1,62 @@
+exports[`Navigation should mount successfully 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role=\'tablist\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+  |  
+  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+  |  
+  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+"
+`;
+
+exports[`Navigation should render a next button 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role=\'tablist\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+  |  
+  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+  |  
+  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+"
+`;
+
+exports[`Navigation should render a prev button 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role=\'tablist\')
+    li.carousel-dot(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'false\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.false(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 0\', tabindex=\'0\', class=\'active:\')
+    li.carousel-dot.carousel-dot--active(aria-hidden=\'false\', role=\'presentation\', aria-selected=\'true\', style=\'margin-top: 20px;\')
+      button.carousel-dot-button.true(type=\'button\', role=\'button\', aria-label=\'\`Item \${index}\`\', title=\'Item 1\', tabindex=\'0\', class=\'active:\')
+  |  
+  svg.flickity-button-icon(viewbox=\'0 0 100 100\', style=\'display: inherit;\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+  |  
+  svg.flickity-button-icon.next(viewbox=\'0 0 100 100\', style=\'\')
+    path.arrow(d=\'M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z\')
+"
+`;

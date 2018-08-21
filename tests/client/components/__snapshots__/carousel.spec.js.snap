@@ -1,0 +1,155 @@
+exports[`Carousel should apply custom slides per page when responsive param provided 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should apply default carousel width when element has 0 width 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should be unable to advance backward by default 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should be unable to advance forward by default (no slides added) 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should decrease current page number by 1 when advance page backward is called 1`] = `
+".carousel-wrapper
+  .carousel-inner(role='listbox', style='visibility: hidden;')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role='tablist')
+    li.carousel-dot(aria-hidden='false', role='presentation', aria-selected='false', style='margin-top: 20px;')
+      button.carousel-dot-button.false(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 0', tabindex='0', class='active:')
+    li.carousel-dot.carousel-dot--active(aria-hidden='false', role='presentation', aria-selected='true', style='margin-top: 20px;')
+      button.carousel-dot-button.true(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 1', tabindex='0', class='active:')
+  |  
+  svg.flickity-button-icon(viewbox='0 0 100 100', style='display: inherit;')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+  |  
+  svg.flickity-button-icon.next(viewbox='0 0 100 100', style='')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+"
+`;
+
+exports[`Carousel should fall back to default slides per page when no responsive param provided 1`] = `
+".carousel-wrapper
+  .carousel-inner(role='listbox', style='visibility: hidden;')
+    .carousel-slide
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role='tablist')
+    li.carousel-dot(aria-hidden='false', role='presentation', aria-selected='false', style='margin-top: 20px;')
+      button.carousel-dot-button.false(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 0', tabindex='0', class='active:')
+    li.carousel-dot.carousel-dot--active(aria-hidden='false', role='presentation', aria-selected='true', style='margin-top: 20px;')
+      button.carousel-dot-button.true(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 1', tabindex='0', class='active:')
+  |  
+  svg.flickity-button-icon(viewbox='0 0 100 100', style='display: inherit;')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+  |  
+  svg.flickity-button-icon.next(viewbox='0 0 100 100', style='')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+"
+`;
+
+exports[`Carousel should increase current page number by 1 when advance page is called 1`] = `
+".carousel-wrapper
+  .carousel-inner(role='listbox', style='visibility: hidden;')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role='tablist')
+    li.carousel-dot(aria-hidden='false', role='presentation', aria-selected='false', style='margin-top: 20px;')
+      button.carousel-dot-button.false(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 0', tabindex='0', class='active:')
+    li.carousel-dot.carousel-dot--active(aria-hidden='false', role='presentation', aria-selected='true', style='margin-top: 20px;')
+      button.carousel-dot-button.true(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 1', tabindex='0', class='active:')
+  |  
+  svg.flickity-button-icon(viewbox='0 0 100 100', style='display: inherit;')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+  |  
+  svg.flickity-button-icon.next(viewbox='0 0 100 100', style='')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+"
+`;
+
+exports[`Carousel should increase current page number by 1 when advance page is called with a non "backward" argument 1`] = `
+".carousel-wrapper
+  .carousel-inner(role='listbox', style='visibility: hidden;')
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role='tablist')
+    li.carousel-dot(aria-hidden='false', role='presentation', aria-selected='false', style='margin-top: 20px;')
+      button.carousel-dot-button.false(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 0', tabindex='0', class='active:')
+    li.carousel-dot.carousel-dot--active(aria-hidden='false', role='presentation', aria-selected='true', style='margin-top: 20px;')
+      button.carousel-dot-button.true(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 1', tabindex='0', class='active:')
+  |  
+  svg.flickity-button-icon(viewbox='0 0 100 100', style='display: inherit;')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+  |  
+  svg.flickity-button-icon.next(viewbox='0 0 100 100', style='')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+"
+`;
+
+exports[`Carousel should mount successfully 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should register 0 slides when 0 slides are added to the slots 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
+
+exports[`Carousel should register 3 slides when 3 slides are added to the slots 1`] = `
+".carousel-wrapper
+  .carousel-inner(role='listbox', style='visibility: hidden;')
+    .carousel-slide
+    .carousel-slide
+    .carousel-slide
+|  
+.carousel-pagination
+  ul.carousel-dot-container(role='tablist')
+    li.carousel-dot(aria-hidden='false', role='presentation', aria-selected='false', style='margin-top: 20px;')
+      button.carousel-dot-button.false(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 0', tabindex='0', class='active:')
+    li.carousel-dot.carousel-dot--active(aria-hidden='false', role='presentation', aria-selected='true', style='margin-top: 20px;')
+      button.carousel-dot-button.true(type='button', role='button', aria-label='\`Item \${index}\`', title='Item 1', tabindex='0', class='active:')
+  |  
+  svg.flickity-button-icon(viewbox='0 0 100 100', style='display: inherit;')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+  |  
+  svg.flickity-button-icon.next(viewbox='0 0 100 100', style='')
+    path.arrow(d='M 10,50 L 60,100 L 60,95 L 15,50  L 60,5 L 60,0 Z')
+"
+`;
+
+exports[`Carousel should unmount successfully 1`] = `
+".carousel-wrapper
+  .carousel-inner(role=\'listbox\', style=\'visibility: hidden;\')
+// 
+"
+`;
