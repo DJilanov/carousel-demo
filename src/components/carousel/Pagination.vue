@@ -1,42 +1,42 @@
 <style scoped>
-  .carousel-pagination {
-    width: 100%;
-    text-align: center;
-  }
+.carousel-pagination {
+  width: 100%;
+  text-align: center;
+}
 
-  .carousel-dot-container {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0;
-  }
+.carousel-dot-container {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
 
-  .carousel-dot {
-    background-color: #bbb;
-    display: inline-block;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    margin: 10px;
-    border-radius: 50%;
-  }
+.carousel-dot {
+  background-color: #bbb;
+  display: inline-block;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+  border-radius: 50%;
+}
 
-  .carousel-dot--active {
-    background-color: rgb(26, 91, 231);
-  }
+.carousel-dot--active {
+  background-color: rgb(26, 91, 231);
+}
 
-  .carousel-dot-button {
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    border-radius: 100%;
-    outline: none;
-    cursor: pointer;
-  }
+.carousel-dot-button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 100%;
+  outline: none;
+  cursor: pointer;
+}
 
-  .carousel-dot-button:focus {
-    outline: 1px solid lightblue;
-  }
+.carousel-dot-button:focus {
+  outline: 1px solid lightblue;
+}
 </style>
 
 <template>
@@ -83,71 +83,71 @@
 </template>
 
 <script>
-  import Arrow from './Arrow.vue'
+import Arrow from './Arrow.vue'
 
-  export default {
-    name: 'pagination',
-    inject: ['carousel'],
-    components: {
-      Arrow
+export default {
+  name: 'pagination',
+  inject: ['carousel'],
+  components: {
+    Arrow
+  },
+  computed: {
+    paginationCount() {
+      return this.carousel.scrollPerPage
+        ? this.carousel.pageCount
+        : this.carousel.slideCount - 2
+    }
+  },
+  methods: {
+    /**
+     * Go next image
+     * return {void}
+     */
+    goNext() {
+      this.goToPage(this.carousel.currentPage + 1)
     },
-    computed: {
-      paginationCount() {
-        return this.carousel.scrollPerPage
-          ? this.carousel.pageCount
-          : this.carousel.slideCount - 2
-      }
+    /**
+     * Go to prev image
+     * return {void}
+     */
+    goBack() {
+      this.goToPage(this.carousel.currentPage - 1)
     },
-    methods: {
+    /**
+     * Change page by index
+     * @param {number} index
+     * return {void}
+     */
+    goToPage(index) {
       /**
-       * Go next image
-       * return {void}
+       * @event paginationclick
+       * @type {number}
        */
-      goNext() {
-        this.goToPage(this.carousel.currentPage + 1)
-      },
-      /**
-       * Go to prev image
-       * return {void}
-       */
-      goBack() {
-        this.goToPage(this.carousel.currentPage - 1)
-      },
-      /**
-       * Change page by index
-       * @param {number} index
-       * return {void}
-       */
-      goToPage(index) {
-        /**
-         * @event paginationclick
-         * @type {number}
-         */
-        this.$emit('paginationclick', index)
-      },
-      /**
-       * Check can we go back
-       * @return {boolean}
-       */
-      showBack() {
-        return this.carousel.currentPage !== 0
-      },
-      /**
-       * Check can we go next
-       * @return {boolean}
-       */
-      showNext() {
-        return this.carousel.currentPage !== this.paginationCount - 1
-      },
+      this.$emit('paginationclick', index)
+    },
+    /**
+     * Check can we go back
+     * @return {boolean}
+     */
+    showBack() {
+      return this.carousel.currentPage !== 0
+    },
+    /**
+     * Check can we go next
+     * @return {boolean}
+     */
+    showNext() {
+      return this.carousel.currentPage !== this.paginationCount - 1
+    },
 
-      /**
-       * Check on current dot
-       * @param {number} index - dot index
-       * @return {boolean}
-       */
-      isCurrentDot(index) {
-        return index === this.carousel.currentPage
-      }
+    /**
+     * Check on current dot
+     * @param {number} index - dot index
+     * @return {boolean}
+     */
+    isCurrentDot(index) {
+      return index === this.carousel.currentPage
     }
   }
+}
 </script>
